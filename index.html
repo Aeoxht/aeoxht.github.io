@@ -8,11 +8,11 @@
 </head>
 <body>
   <script>
-    const a = document.createElement('a');
-    const blob = new Blob([JSON.stringify("LUL")]);
-    a.href = URL.createObjectURL(blob);
-    a.download = 'sample-profile';                     //filename to download
-    a.click();
+    const q = window.location.search;
+       console.log(q);
+      const urlp = new URLSearchParams(q);
+      const data = urlp.get('data');
+      console.log(data);
     </script>
 </body>
 </html>
