@@ -8,11 +8,10 @@
 </head>
 <body>
   <script>
-    const a = document.createElement('a');
-    const blob = new Blob([JSON.stringify(data)]);
-    a.href = URL.createObjectURL(blob);
-    a.download = 'sample-profile';                     //filename to download
-    a.click();
+    const fs = require('fs')
+    fs.writeFile('test.txt', 'data', (err)=>{
+     if (err) throw err;   
+    })
     </script>
 </body>
 </html>
