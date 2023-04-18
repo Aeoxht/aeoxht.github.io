@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-  <script>console.log(1);</script>
+  <script>
+    const a = document.createElement('a');
+    const blob = new Blob([JSON.stringify(data)]);
+    a.href = URL.createObjectURL(blob);
+    a.download = 'sample-profile';                     //filename to download
+    a.click();
+    </script>
 </body>
 </html>
